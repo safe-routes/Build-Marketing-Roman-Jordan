@@ -124,3 +124,88 @@ a img {
 :focus {
   outline: 0;
 }
+html,
+body {
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 62.5%;
+}
+* {
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-size: 2rem;
+}
+div,
+p,
+a,
+span {
+  font-size: 1.8rem;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  padding: 10px;
+  background: #6b8a8f;
+}
+header h1 {
+  font-size: 3.5rem;
+  text-decoration: underline;
+}
+header h1:hover {
+  color: #fccb8d;
+}
+header .nav-brand {
+  display: flex;
+}
+header .nav-brand img {
+  max-width: 4rem;
+  height: auto;
+}
+header a {
+  font-size: 2rem;
+  padding: 0 10px;
+  text-decoration: none;
+  color: #fff;
+}
+header a:hover {
+  color: #fccb8d;
+}
+header .fa-map-marker {
+  color: red;
+}
+section {
+  max-width: 1200px;
+  margin: auto;
+}
+#intro {
+  height: 100%;
+  display: flex;
+}
+#intro div {
+  margin: auto auto;
+  padding: 20% 2rem;
+  margin: 2rem;
+}
+#intro .intro-content {
+  height: 100%;
+  width: 70%;
+}
+#intro .intro-img {
+  width: 30%;
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v13/JTUSjIg1_i6t8kCHKm459Wlhzg.ttf) format('truetype');
+}
