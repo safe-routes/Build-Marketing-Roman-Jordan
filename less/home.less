@@ -28,6 +28,12 @@ section{
 
 
 .crashData-container{
+    h2,h3{
+        font-size:4rem;
+    }
+    h2{
+        margin: 0 0 4rem 0;
+    }
    
     .crashData-content{
         margin:5rem 0;
@@ -35,12 +41,7 @@ section{
         justify-content: space-evenly;
         align-content: center;
         align-items: center;
-        h2,h3{
-            font-size:4rem;
-        }
-        h2{
-            margin: 0 0 4rem 0;
-        }
+        
         .crashData-left{
             svg{
                 height:50vh;
@@ -48,12 +49,15 @@ section{
             path{
                 fill:#fff;
                 stroke:#666;
+                .active{
+                    fill:@yel;
+                }
                 &:hover{
                     fill:@yel;
                     stroke:@blue;
                 }
             }
-            .activeState{
+            .active{
                 fill:@blue;
             }
         }

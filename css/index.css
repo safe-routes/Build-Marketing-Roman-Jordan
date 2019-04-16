@@ -222,19 +222,19 @@ section {
 .intro-container .intro-img {
   width: 30%;
 }
+.crashData-container h2,
+.crashData-container h3 {
+  font-size: 4rem;
+}
+.crashData-container h2 {
+  margin: 0 0 4rem 0;
+}
 .crashData-container .crashData-content {
   margin: 5rem 0;
   display: flex;
   justify-content: space-evenly;
   align-content: center;
   align-items: center;
-}
-.crashData-container .crashData-content h2,
-.crashData-container .crashData-content h3 {
-  font-size: 4rem;
-}
-.crashData-container .crashData-content h2 {
-  margin: 0 0 4rem 0;
 }
 .crashData-container .crashData-content .crashData-left svg {
   height: 50vh;
@@ -243,11 +243,14 @@ section {
   fill: #fff;
   stroke: #666;
 }
+.crashData-container .crashData-content .crashData-left path .active {
+  fill: #fccb8d;
+}
 .crashData-container .crashData-content .crashData-left path:hover {
   fill: #fccb8d;
   stroke: #6b8a8f;
 }
-.crashData-container .crashData-content .crashData-left .activeState {
+.crashData-container .crashData-content .crashData-left .active {
   fill: #6b8a8f;
 }
 .crashData-container .crashData-content .crashData-right {
