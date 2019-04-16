@@ -222,8 +222,19 @@ section {
 .intro-container .intro-img {
   width: 30%;
 }
-.crashData-container img {
-  max-width: 50%;
+.crashData-container .crashData-content {
+  margin: 5rem 0;
+}
+.crashData-container svg {
+  height: 60vh;
+}
+.crashData-container path {
+  fill: #fff;
+  stroke: #666;
+}
+.crashData-container path:hover {
+  fill: #fccb8d;
+  stroke: #6b8a8f;
 }
 .team-content {
   display: flex;
