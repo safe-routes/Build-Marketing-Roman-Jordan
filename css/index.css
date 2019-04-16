@@ -224,17 +224,39 @@ section {
 }
 .crashData-container .crashData-content {
   margin: 5rem 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  align-items: center;
 }
-.crashData-container svg {
-  height: 60vh;
+.crashData-container .crashData-content h2,
+.crashData-container .crashData-content h3 {
+  font-size: 4rem;
 }
-.crashData-container path {
+.crashData-container .crashData-content h2 {
+  margin: 0 0 4rem 0;
+}
+.crashData-container .crashData-content .crashData-left svg {
+  height: 50vh;
+}
+.crashData-container .crashData-content .crashData-left path {
   fill: #fff;
   stroke: #666;
 }
-.crashData-container path:hover {
+.crashData-container .crashData-content .crashData-left path:hover {
   fill: #fccb8d;
   stroke: #6b8a8f;
+}
+.crashData-container .crashData-content .crashData-left .activeState {
+  fill: #6b8a8f;
+}
+.crashData-container .crashData-content .crashData-right {
+  width: 40%;
+  margin: 5rem;
+  padding: 2rem;
+}
+.crashData-container .crashData-content .crashData-right h3 {
+  padding: 1rem 0;
 }
 .team-content {
   display: flex;
