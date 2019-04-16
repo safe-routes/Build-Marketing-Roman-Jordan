@@ -150,6 +150,9 @@ img {
   height: auto;
 }
 header {
+  position: fixed;
+  top: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-content: center;
@@ -159,7 +162,6 @@ header {
 }
 header h1 {
   font-size: 3.5rem;
-  text-decoration: underline;
 }
 header h1:hover {
   color: #fccb8d;
@@ -173,7 +175,7 @@ header .nav-brand img {
 }
 header a {
   font-size: 2rem;
-  padding: 0 10px;
+  padding: 0 2rem;
   text-decoration: none;
   color: #fff;
 }
@@ -186,22 +188,61 @@ header .fa-map-marker {
 section {
   max-width: 1200px;
   margin: auto;
-}
-#intro {
   height: 100%;
+  padding-top: 2rem;
+}
+.intro-container {
+  margin-top: 5%;
   display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  align-items: center;
 }
-#intro div {
-  margin: auto auto;
-  padding: 20% 2rem;
-  margin: 2rem;
-}
-#intro .intro-content {
+.intro-container .intro-content {
   height: 100%;
   width: 70%;
 }
-#intro .intro-img {
+.intro-container .intro-content h2 {
+  font-size: 3.5rem;
+}
+.intro-container .intro-content button {
+  border-radius: 1rem;
+  color: #fff;
+  margin: 3rem 4rem 0 0;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  text-align: center;
+  background: #fec872;
+  border: 1px solid #fec872;
+}
+.intro-container .intro-content button:hover {
+  background: #fff;
+  color: #fec872;
+}
+.intro-container .intro-img {
   width: 30%;
+}
+.crashData-container img {
+  max-width: 50%;
+}
+.team-content {
+  display: flex;
+  flex-direction: column;
+}
+.team-content .member-card {
+  width: 80%;
+  margin: auto;
+  padding: 2rem;
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+.team-content .member-card img {
+  width: 150px;
+}
+.team-content .member-card:nth-child(even) {
+  flex-direction: row-reverse;
+  padding: 0 2rem;
 }
 @font-face {
   font-family: 'Montserrat';
