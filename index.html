@@ -132,7 +132,7 @@
             <img src="img/avatars/man (12).png"> 
             <div class="avatar">
               <h3>Simon Davis</h3>
-              <p>Simon ... Bio. Here you will find a good amout of stuff concerning simon. His likes, dislikes, pets etc. This should 
+              <p>Simon ... Bio. Here you will find a good amount of stuff concerning simon. His likes, dislikes, pets etc. This should 
                 be a short paragraph, not to exceed 300Chars. If bios are not provided, they will be made;
               </p>
             </div>
@@ -200,11 +200,30 @@
     </footer>-->
 
     <script>
+      class ActiveState{
+        constructor(states,targetState){
+          this.states = states;
+          this.state = targetState;
+          this.state.addEventListener('click', () => {
+            this.stateSelected();
+          })
+        }
+        stateSelected(){
+          this.states.forEach(state =>{
+            state.classList.remove('activeState');
+          })
+          this.state.classList.add('activeState');
+        }
+
+      }
+      
+      
       let stateSelector = document.querySelectorAll('path');
-      let state = stateSelector.querySelector('.activeState')
       stateSelector.forEach(state => {
-        state.classList.remove('activeState');
+        new ActiveState(stateSelector,state);
       })
+
+      
     </script>
 
 </body>
