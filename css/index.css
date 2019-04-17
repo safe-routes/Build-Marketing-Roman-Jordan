@@ -1,0 +1,288 @@
+/**
+ * Global Reset of all HTML Elements
+ *
+ * Resetting all of our HTML Elements ensures a smoother
+ * visual transition between browsers. If you don't believe me,
+ * try temporarily commenting out this block of code, then go
+ * and look at Mozilla versus Safari, both good browsers with
+ * a good implementation of CSS. The thing is, all browser CSS
+ * defaults are different and at the end of the day if visual
+ * consistency is what we're shooting for, then we need to
+ * make sure we're resetting all spacing elements.
+ *
+ */
+html,
+body {
+  border: 0;
+  font-family: "Helvetica-Neue", "Helvetica", Arial, sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+div,
+span,
+object,
+iframe,
+img,
+table,
+caption,
+thead,
+tbody,
+tfoot,
+tr,
+tr,
+td,
+article,
+aside,
+canvas,
+details,
+figure,
+hgroup,
+menu,
+nav,
+footer,
+header,
+section,
+summary,
+mark,
+audio,
+video {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+address,
+cit,
+code,
+del,
+dfn,
+em,
+ins,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+b,
+i,
+hr,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+legend,
+label {
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+}
+article,
+aside,
+canvas,
+figure,
+figure img,
+figcaption,
+hgroup,
+footer,
+header,
+nav,
+section,
+audio,
+video {
+  display: block;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+table caption,
+table th,
+table td {
+  text-align: left;
+  vertical-align: middle;
+}
+a img {
+  border: 0;
+}
+:focus {
+  outline: 0;
+}
+html,
+body {
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 62.5%;
+}
+* {
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-size: 2rem;
+}
+div,
+p,
+a,
+span {
+  font-size: 1.8rem;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  padding: 10px;
+  background: #6b8a8f;
+}
+header h1 {
+  font-size: 3.5rem;
+}
+header h1:hover {
+  color: #fccb8d;
+}
+header .nav-brand {
+  display: flex;
+}
+header .nav-brand img {
+  max-width: 4rem;
+  height: auto;
+}
+header a {
+  font-size: 2rem;
+  padding: 0 2rem;
+  text-decoration: none;
+  color: #fff;
+}
+header a:hover {
+  color: #fccb8d;
+}
+header .fa-map-marker {
+  color: red;
+}
+section {
+  max-width: 1200px;
+  margin: auto;
+  height: 100%;
+  padding-top: 2rem;
+}
+.intro-container {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  align-items: center;
+}
+.intro-container .intro-content {
+  height: 100%;
+  width: 70%;
+}
+.intro-container .intro-content h2 {
+  font-size: 3.5rem;
+}
+.intro-container .intro-content button {
+  border-radius: 1rem;
+  color: #fff;
+  margin: 3rem 4rem 0 0;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  text-align: center;
+  background: #fec872;
+  border: 1px solid #fec872;
+}
+.intro-container .intro-content button:hover {
+  background: #fff;
+  color: #fec872;
+}
+.intro-container .intro-img {
+  width: 30%;
+}
+.crashData-container h2,
+.crashData-container h3 {
+  font-size: 4rem;
+}
+.crashData-container h2 {
+  margin: 0 0 4rem 0;
+}
+.crashData-container .crashData-content {
+  margin: 5rem 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  align-items: center;
+}
+.crashData-container .crashData-content .crashData-left svg {
+  height: 50vh;
+}
+.crashData-container .crashData-content .crashData-left path {
+  fill: #fff;
+  stroke: #666;
+}
+.crashData-container .crashData-content .crashData-left path .active {
+  fill: #fccb8d;
+}
+.crashData-container .crashData-content .crashData-left path:hover {
+  fill: #fccb8d;
+  stroke: #6b8a8f;
+}
+.crashData-container .crashData-content .crashData-left .active {
+  fill: #6b8a8f;
+}
+.crashData-container .crashData-content .crashData-right {
+  width: 40%;
+  margin: 5rem;
+  padding: 2rem;
+}
+.crashData-container .crashData-content .crashData-right h3 {
+  padding: 1rem 0;
+}
+.team-content {
+  display: flex;
+  flex-direction: column;
+}
+.team-content .member-card {
+  width: 80%;
+  margin: auto;
+  padding: 2rem;
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+.team-content .member-card img {
+  width: 150px;
+}
+.team-content .member-card:nth-child(even) {
+  flex-direction: row-reverse;
+  padding: 0 2rem;
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v13/JTUSjIg1_i6t8kCHKm459Wlhzg.ttf) format('truetype');
+}
