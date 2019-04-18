@@ -1,0 +1,12 @@
+[18-Apr-2019 22:53:46 UTC] PHP Warning:  file_get_contents(http://crashpredictr-env.jjrxtdfaz3.us-east-2.elasticbeanstalk.com/predict/): failed to open stream: HTTP request failed! HTTP/1.1 404 NOT FOUND
+ in /home/getsaferoutes/public_html/crashData.php on line 16
+[18-Apr-2019 22:54:15 UTC] PHP Warning:  file_get_contents(http://crashpredictr-env.jjrxtdfaz3.us-east-2.elasticbeanstalk.com/predict/): failed to open stream: HTTP request failed! HTTP/1.1 404 NOT FOUND
+ in /home/getsaferoutes/public_html/crashData.php on line 16
+[18-Apr-2019 22:55:48 UTC] PHP Warning:  file_get_contents(http://crashpredictr-env.jjrxtdfaz3.us-east-2.elasticbeanstalk.com/predict/): failed to open stream: HTTP request failed! HTTP/1.1 404 NOT FOUND
+ in /home/getsaferoutes/public_html/crashData.php on line 16
+[18-Apr-2019 22:55:56 UTC] PHP Warning:  file_get_contents(http://crashpredictr-env.jjrxtdfaz3.us-east-2.elasticbeanstalk.com/predict/): failed to open stream: HTTP request failed! HTTP/1.1 404 NOT FOUND
+ in /home/getsaferoutes/public_html/crashData.php on line 16
+[18-Apr-2019 22:56:07 UTC] PHP Warning:  file_get_contents(http://crashpredictr-env.jjrxtdfaz3.us-east-2.elasticbeanstalk.com/predict/): failed to open stream: HTTP request failed! HTTP/1.1 404 NOT FOUND
+ in /home/getsaferoutes/public_html/crashData.php on line 16
+[18-Apr-2019 22:57:35 UTC] PHP Warning:  file_get_contents(http://crashpredictr-env.jjrxtdfaz3.us-east-2.elasticbeanstalk.com/predict/): failed to open stream: HTTP request failed! HTTP/1.1 404 NOT FOUND
+ in /home/getsaferoutes/public_html/crashData.php on line 16

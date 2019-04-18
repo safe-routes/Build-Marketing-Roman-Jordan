@@ -129,6 +129,7 @@ body {
   height: 100%;
   font-family: 'Montserrat', sans-serif;
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 * {
   box-sizing: border-box;
@@ -148,6 +149,9 @@ span {
 img {
   width: 100%;
   height: auto;
+}
+.active {
+  color: #fec872;
 }
 header {
   position: fixed;
@@ -185,10 +189,50 @@ header a:hover {
 header .fa-map-marker {
   color: red;
 }
+nav .navLinks {
+  margin-right: 7rem;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: all 1s;
+}
+nav .barWrapper {
+  position: absolute;
+  padding: 1rem;
+  right: 2rem;
+  cursor: pointer;
+  top: 1rem;
+  right: 3rem;
+}
+nav .barWrapper .bar1,
+nav .barWrapper .bar2,
+nav .barWrapper .bar3 {
+  width: 3.5rem;
+  height: 0.5rem;
+  background-color: #fff;
+  margin: 0.6rem 0;
+  transition: 0.4s;
+}
+nav .active .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+nav .active .bar2 {
+  opacity: 0;
+}
+nav .active .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+nav .active .navLinks {
+  opacity: 1;
+  height: auto;
+  transition: all 1s;
+}
 section {
   max-width: 1200px;
   margin: auto;
-  height: 100%;
+  min-height: 100%;
   padding-top: 2rem;
 }
 .intro-container {
@@ -212,15 +256,17 @@ section {
   padding: 1.2rem;
   font-size: 1.8rem;
   text-align: center;
-  background: #fec872;
-  border: 1px solid #fec872;
+  background: #6b8a8f;
+  border: 1px solid #6b8a8f;
 }
 .intro-container .intro-content button:hover {
   background: #fff;
-  color: #fec872;
+  color: #6b8a8f;
+  border: 1px solid #6b8a8f;
 }
 .intro-container .intro-img {
   width: 30%;
+  padding: 2rem;
 }
 .crashData-container h2,
 .crashData-container h3 {
@@ -229,8 +275,11 @@ section {
 .crashData-container h2 {
   margin: 0 0 4rem 0;
 }
+.crashData-container h4 {
+  margin: 1.5rem 0 1rem 0;
+}
 .crashData-container .crashData-content {
-  margin: 5rem 0;
+  margin: 2rem 0;
   display: flex;
   justify-content: space-evenly;
   align-content: center;
@@ -255,13 +304,14 @@ section {
 }
 .crashData-container .crashData-content .crashData-right {
   width: 40%;
-  margin: 5rem;
+  margin: 2rem 5rem;
   padding: 2rem;
 }
 .crashData-container .crashData-content .crashData-right h3 {
   padding: 1rem 0;
 }
 .team-content {
+  overflow: auto;
   display: flex;
   flex-direction: column;
 }
@@ -276,9 +326,61 @@ section {
 .team-content .member-card img {
   width: 150px;
 }
+.team-content .member-card img:hover {
+  transform: rotateY(180deg);
+}
 .team-content .member-card:nth-child(even) {
   flex-direction: row-reverse;
   padding: 0 2rem;
+}
+#joinUs {
+  background: url('../img/questions.png');
+}
+#joinUs h2 {
+  font-size: 3rem;
+}
+#joinUs .joinUsContainer {
+  margin: 5rem 0;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+#joinUs .joinUsContainer h3 {
+  font-size: 2.5rem;
+  margin: 1rem 0;
+}
+#joinUs .joinUsContainer div {
+  width: 50%;
+  padding: 0 2rem;
+}
+input[type=text],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+input[type=submit] {
+  border-radius: 1rem;
+  color: #fff;
+  margin: 3rem 4rem 0 0;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  text-align: center;
+  background: #6b8a8f;
+  border: 1px solid #6b8a8f;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  background: #fff;
+  color: #6b8a8f;
+  border: 1px solid #6b8a8f;
 }
 @font-face {
   font-family: 'Montserrat';

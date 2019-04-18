@@ -1,7 +1,7 @@
 section{
     max-width:1200px;
     margin:auto;
-    height:100%; 
+    min-height:100%; 
     padding-top:2rem;
 }
 .intro-container{
@@ -23,6 +23,7 @@ section{
 
     .intro-img{
         width:30%;
+        padding:2rem;
     }
 }
 
@@ -34,9 +35,12 @@ section{
     h2{
         margin: 0 0 4rem 0;
     }
-   
+
+    h4{
+        margin: 1.5rem 0 1rem 0;
+    }
     .crashData-content{
-        margin:5rem 0;
+        margin:2rem 0;
         display:flex;
         justify-content: space-evenly;
         align-content: center;
@@ -64,16 +68,18 @@ section{
 
         .crashData-right{
             width:40%;
-            margin:5rem;
+            margin:2rem 5rem;
             padding:2rem;
             h3{
                 padding:1rem 0;
             }
         }
-    }   
+
+    }
 }
 
 .team-content{
+    overflow:auto;
     display:flex;
     flex-direction: column;
     .member-card{
@@ -86,11 +92,36 @@ section{
         
         img{
             width:150px;
+            &:hover{
+                transform: rotateY(180deg);
+            }
         }
     }
     .member-card:nth-child(even){
         flex-direction: row-reverse;
         padding:0 2rem;
+    }
+}
+
+#joinUs{
+    background: url('../img/questions.png');
+    h2{
+        font-size:3rem;
+    }
+    .joinUsContainer{
+        margin:5rem 0;
+        display:flex;
+        align-content: center;
+        align-items: center;
+        flex-direction: row-reverse;
+        h3{
+            font-size:2.5rem;
+            margin:1rem 0;
+        }
+        div{
+            width:50%;
+            padding:0 2rem;
+        }
     }
 }
 

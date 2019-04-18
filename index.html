@@ -10,18 +10,20 @@
 <body>
     <header>
       <div class="nav-brand">
-        <a href="#intro"><h1>Safe Routes</h1></a>
+        <a class="navLink" href="#intro"><h1>Safe Routes</h1></a>
       </div>
       <nav class="header-nav">
-        <div class="navLinks">
-          <a href="#crashData">Crash Data</a>
-          <a href="#team-data">Meet the Team</a>
-          <a href="#join-us">Join The Community</a>
-        </div>
         <div class="navToggle">
-          <div class="bar1"></div>
-          <div class="bar2"></div>
-          <div class="bar3"></div>
+          <div class="navLinks">
+            <a class="navLink" href="#crashData">Crash Data</a>
+            <a class="navLink" href="#team-data">Meet the Team</a>
+            <a class="navLink" href="#joinUs">Join The Community</a>
+          </div>
+          <div class="barWrapper">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
         </div>
       </nav>
     </header>
@@ -41,8 +43,9 @@
         <img class="intro-img" src="img/phone-gps.png">
       </div> 
     </section>
+
     <section id="crashData">
-        <div class="crashData-container">
+      <div class="crashData-container">
           <h2>Crash Data:</h2>
           <p class="txtLight"></p>
           <div class="crashData-content">
@@ -112,30 +115,20 @@
             </div>
             <div class="crashData-right">
               <h3>Did you know?</h3>
-              <h4>How Safe Are you?</h4>
-              <p>__ Is the safest state to drive in while __ is the most dangerous</p>
-              <h4>Does your Vehicle Matter?</h4>
-              <p>According to ... ___ has been in the most collisions resulting in fatalities</p>
-              <div class="graphs">
-                <div class="graph">
-                  
-                </div>
-                <div class="graph">
-                  
-                </div>
-                <div class="graph">
-                  
-                </div>
-              </div>
+              <img src="img/graphs/weekendGraph.png">
             </div>
         </div> 
+      </div>
     </section>
 
     <section id="team-data">
       <h2>Meet the Minds behind the Safe Routes Magic</h2>
       <div class="team-content">
           <div class="member-card"> 
-            <img src="img/avatars/man (12).png"> 
+            <div class="memberAvatar">
+              <img src="img/avatars/man (12).png">
+              <div class="chatBubble"><p>Click Me</p></div> 
+            </div>
             <div class="avatar">
               <h3>Simon Davis</h3>
               <p>Simon ... Bio. Here you will find a good amount of stuff concerning simon. His likes, dislikes, pets etc. This should 
@@ -144,7 +137,10 @@
             </div>
           </div>
           <div class="member-card">       
-              <img src="img/avatars/woman (3).png">           
+              <div class="memberAvatar">
+                <img src="img/avatars/man (12).png">
+                <div class="chatBubble"><p>Click Me</p></div> 
+              </div>           
               <div class="avatar">
                 <h3>Trista Paul</h3>
                 <p>Simon ... Bio. Here you will find a good amout of stuff concerning simon. His likes, dislikes, pets etc. This should 
@@ -180,20 +176,35 @@
                 </p>
               </div>
           </div>
-        </div> 
+        </div>
     </section>
-    <section id="join-us">
-      <div class="join-us-container">
-        <div class="join-us-message">
+    
+    <section id="joinUs">
+      <h2>Have a Question?</h2>
+      <div class="joinUsContainer">
+        <div class="joinUsMessage">
+          <h3>Reach out to us here -</h3>
+          <p>We love helping our community. If you need help implementing safe routes into your project or need special
+            access to our proprietary A.P.I. here would be a great place to start. As well, we are always in search of
+            great minds. That being said, if you have an idea that could benefit your community, lets hear it.
+          </p>
 
         </div>
-        <form>
-
-        </form>
+        <div class="formContainer">
+          <form action="/formSubmit.php" method="POST">
+            <label for="fname">Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        
+            <label for="email">Email Address</label>
+            <input type="text" id="email" name="email" placeholder="Your last Email..">
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+          
       </div>
         
     </section>
-    <!--<footer>
+    <footer>
       <p>Attribution:</p>
       <ul>
         <li><a href="https://www.freepik.com/free-photos-vectors/people">People vector created by Sapann-Design - www.freepik.com</a></li>
@@ -203,7 +214,7 @@
         <li></li>
       </ul>
 
-    </footer>-->
+    </footer>
 
     <script>
       class Active{
@@ -215,26 +226,36 @@
           })
         }
         selected(){
-          this.obj.forEach(element =>{
-            element.classList.remove('active');
-          })
-          this.target.classList.add('active');
+          if(!this.target.classList.contains('barWrapper')){
+            this.obj.forEach(element =>{
+              element.classList.remove('active');
+            })
+          }else{
+            this.target.parentNode.classList.toggle('active');
+          }
+          this.target.classList.toggle('active');
         }
-      }
+      }// Sets Active State
 
       let states = document.querySelectorAll('path');
       states.forEach(state => {
         new Active(states,state);
       })
 
-      let navLinks = document.querySelectorAll('.nav-brand > a, .navLinks > a');
-      navLinks.forEach(link => {
-        new Active(navLinks,link);
+      let navBrand = document.querySelectorAll('.navLink');
+      navBrand.forEach(link => {
+        new Active(navBrand,link);
       })
+
+      let navToggle = document.querySelectorAll('.barWrapper');
+      navToggle.forEach(link => {
+        new Active(navToggle,link);
+      })
+
       
+     
 
       //CrashData
-
       var xhr = new XMLHttpRequest();
       xhr.open("POST", 'fars.php', true);
 
@@ -246,10 +267,8 @@
               console.log(xhr.response);
           }
       }
-      xhr.send("foo=bar&lorem=ipsum");
-      let string = "9lesaeWesruob6";
-      string = string.split('').reverse().join('');
-      console.log(string)
+      xhr.send();
+     
     </script>
 
 </body>
