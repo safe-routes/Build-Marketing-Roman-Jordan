@@ -10,18 +10,21 @@
 <body>
     <header>
       <div class="nav-brand">
-        <a href="#intro"><h1>Safe Routes</h1></a>
+        <a class="navLink" href="#intro"><h1>Safe Routes</h1></a>
       </div>
       <nav class="header-nav">
-        <div class="navLinks">
-          <a href="#crashData">Crash Data</a>
-          <a href="#team-data">Meet the Team</a>
-          <a href="#join-us">Join The Community</a>
-        </div>
+        
         <div class="navToggle">
-          <div class="bar1"></div>
-          <div class="bar2"></div>
-          <div class="bar3"></div>
+            <div class="navLinks">
+              <a class="navLink" href="#crashData">Crash Data</a>
+              <a class="navLink" href="#team-data">Meet the Team</a>
+              <a class="navLink" href="#join-us">Join The Community</a>
+            </div>
+          <div class="barWrapper">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
         </div>
       </nav>
     </header>
@@ -129,6 +132,7 @@
               </div>
             </div>
         </div> 
+      </div>
     </section>
 
     <section id="team-data">
@@ -215,26 +219,36 @@
           })
         }
         selected(){
-          this.obj.forEach(element =>{
-            element.classList.remove('active');
-          })
-          this.target.classList.add('active');
+          if(!this.target.classList.contains('navToggle')){
+            this.obj.forEach(element =>{
+              element.classList.remove('active');
+            })
+          }else{
+            
+          }
+          this.target.classList.toggle('active');
         }
-      }
+      }// Sets Active State
 
       let states = document.querySelectorAll('path');
       states.forEach(state => {
         new Active(states,state);
       })
 
-      let navLinks = document.querySelectorAll('.nav-brand > a, .navLinks > a');
-      navLinks.forEach(link => {
-        new Active(navLinks,link);
+      let navBrand = document.querySelectorAll('.navLink');
+      navBrand.forEach(link => {
+        new Active(navBrand,link);
       })
+
+      let navToggle = document.querySelectorAll('.navToggle');
+      navToggle.forEach(link => {
+        new Active(navToggle,link);
+      })
+
       
+     
 
       //CrashData
-
       var xhr = new XMLHttpRequest();
       xhr.open("POST", 'fars.php', true);
 
@@ -246,10 +260,8 @@
               console.log(xhr.response);
           }
       }
-      xhr.send("foo=bar&lorem=ipsum");
-      let string = "9lesaeWesruob6";
-      string = string.split('').reverse().join('');
-      console.log(string)
+      xhr.send();
+     
     </script>
 
 </body>

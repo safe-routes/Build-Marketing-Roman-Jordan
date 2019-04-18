@@ -149,6 +149,9 @@ img {
   width: 100%;
   height: auto;
 }
+.active {
+  color: #fec872;
+}
 header {
   position: fixed;
   top: 0;
@@ -185,6 +188,46 @@ header a:hover {
 header .fa-map-marker {
   color: red;
 }
+nav .navLinks {
+  margin-right: 7rem;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: all 1s;
+}
+nav .barWrapper {
+  position: absolute;
+  padding: 1rem;
+  right: 2rem;
+  cursor: pointer;
+  top: 1rem;
+  right: 3rem;
+}
+nav .barWrapper .bar1,
+nav .barWrapper .bar2,
+nav .barWrapper .bar3 {
+  width: 3.5rem;
+  height: 0.5rem;
+  background-color: #fff;
+  margin: 0.6rem 0;
+  transition: 0.4s;
+}
+nav .active .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+nav .active .bar2 {
+  opacity: 0;
+}
+nav .active .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+nav .active .navLinks {
+  opacity: 1;
+  height: auto;
+  transition: all 1s;
+}
 section {
   max-width: 1200px;
   margin: auto;
@@ -212,12 +255,13 @@ section {
   padding: 1.2rem;
   font-size: 1.8rem;
   text-align: center;
-  background: #fec872;
-  border: 1px solid #fec872;
+  background: #6b8a8f;
+  border: 1px solid #6b8a8f;
 }
 .intro-container .intro-content button:hover {
   background: #fff;
-  color: #fec872;
+  color: #6b8a8f;
+  border: 1px solid #6b8a8f;
 }
 .intro-container .intro-img {
   width: 30%;
@@ -228,6 +272,9 @@ section {
 }
 .crashData-container h2 {
   margin: 0 0 4rem 0;
+}
+.crashData-container h4 {
+  margin: 1.5rem 0 1rem 0;
 }
 .crashData-container .crashData-content {
   margin: 5rem 0;
@@ -275,6 +322,9 @@ section {
 }
 .team-content .member-card img {
   width: 150px;
+}
+.team-content .member-card img:hover {
+  transform: rotateY(180deg);
 }
 .team-content .member-card:nth-child(even) {
   flex-direction: row-reverse;
