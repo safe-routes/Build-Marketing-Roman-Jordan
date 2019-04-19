@@ -16,8 +16,6 @@ if(isset($_POST)){
     $crashData = file_get_contents($url);
     echo $crashData;
     
-    
-
 }else if(isset($_GET)){
     $url = "http://crashpredictr-env.jjrxtdfaz3.us-east-2.elasticbeanstalk.com/predict/".$_GET;
     $crashData = file_get_contents($url);

@@ -8,6 +8,7 @@ header{
     align-items: center;
     padding:10px;
     background:@blue;
+    z-index: 10;
     h1{
         font-size: 3.5rem;  
         &:hover{
@@ -32,21 +33,24 @@ header{
 
     }
 
-    .fa-map-marker{
-        color:red;
-    }
-
 }
 
 nav{
     .navLinks{
-        //display:none;
-        margin-right:7rem;
+        z-index:-10;
         opacity:0;
-        height:0;
-        overflow:hidden;
-        transition:all 1s;
+        display:flex;
+        position:absolute;
+        top:0rem;
+        right:0;
+        background:@blue;
+        
+        @media @mobile{
+            flex-direction: column;
+        }
     }
+
+
 
     .barWrapper{
         position:absolute;
@@ -78,9 +82,13 @@ nav{
         }
 
         .navLinks{
+           
+            top:7rem;
             opacity:1;
             height:auto;
+            
             transition:all 1s;
+
         }
     }
 }

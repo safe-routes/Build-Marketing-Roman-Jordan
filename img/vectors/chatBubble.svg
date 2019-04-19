@@ -1,0 +1,13 @@
+<svg width="120.39mm" height="35.067mm" version="1.1" viewBox="0 0 120.39 35.067" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <filter id="filter1800" x="-.23925" y="-.8972" width="1.4785" height="2.7944" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="8.4779873"/>
+  </filter>
+ </defs>
+ <g transform="translate(-30.617 -94.674)" stroke="#999">
+  <ellipse transform="matrix(.95744 0 0 .33625 13.909 71.201)" cx="80.32" cy="142.41" rx="42.522" ry="11.339" fill="#808080" filter="url(#filter1800)" opacity=".33" stroke-width=".2" style="paint-order:stroke fill markers"/>
+  <rect x="49.13" y="94.757" width="85.437" height="20.822" ry="6.2465" fill="#e9993d" stroke-width=".16598" style="paint-order:stroke fill markers"/>
+  <path d="m49.26 100.5 0.2202 9.5833-11.273-9.0556z" fill="#e9993d" stroke-width=".048312" style="paint-order:stroke fill markers"/>
+ </g>
+ <text x="27.977957" y="13.44767" fill="#ffffff" font-family="sans-serif" font-size="10.583px" letter-spacing="0px" stroke-width=".26458" word-spacing="0px" style="line-height:1.25" xml:space="preserve"><tspan x="27.977957" y="13.44767" fill="#ffffff" stroke-width=".26458">Click on Me</tspan></text>
+</svg>

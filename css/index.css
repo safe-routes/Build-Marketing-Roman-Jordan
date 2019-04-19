@@ -163,6 +163,7 @@ header {
   align-items: center;
   padding: 10px;
   background: #6b8a8f;
+  z-index: 10;
 }
 header h1 {
   font-size: 3.5rem;
@@ -186,15 +187,19 @@ header a {
 header a:hover {
   color: #fccb8d;
 }
-header .fa-map-marker {
-  color: red;
-}
 nav .navLinks {
-  margin-right: 7rem;
+  z-index: -10;
   opacity: 0;
-  height: 0;
-  overflow: hidden;
-  transition: all 1s;
+  display: flex;
+  position: absolute;
+  top: 0rem;
+  right: 0;
+  background: #6b8a8f;
+}
+@media (max-width:500px) {
+  nav .navLinks {
+    flex-direction: column;
+  }
 }
 nav .barWrapper {
   position: absolute;
@@ -225,6 +230,7 @@ nav .active .bar3 {
   transform: rotate(45deg) translate(-8px, -8px);
 }
 nav .active .navLinks {
+  top: 7rem;
   opacity: 1;
   height: auto;
   transition: all 1s;
@@ -232,7 +238,6 @@ nav .active .navLinks {
 section {
   max-width: 1200px;
   margin: auto;
-  min-height: 100%;
   padding-top: 2rem;
 }
 .intro-container {
@@ -242,14 +247,24 @@ section {
   align-content: center;
   align-items: center;
 }
+@media (max-width:500px) {
+  .intro-container {
+    flex-direction: column-reverse;
+  }
+}
 .intro-container .intro-content {
-  height: 100%;
   width: 70%;
+}
+@media (max-width:500px) {
+  .intro-container .intro-content {
+    width: 100%;
+    padding: 0 3rem;
+  }
 }
 .intro-container .intro-content h2 {
   font-size: 3.5rem;
 }
-.intro-container .intro-content button {
+.intro-container .intro-content a {
   border-radius: 1rem;
   color: #fff;
   margin: 3rem 4rem 0 0;
@@ -258,8 +273,10 @@ section {
   text-align: center;
   background: #6b8a8f;
   border: 1px solid #6b8a8f;
+  text-decoration: none;
+  display: inline-block;
 }
-.intro-container .intro-content button:hover {
+.intro-container .intro-content a:hover {
   background: #fff;
   color: #6b8a8f;
   border: 1px solid #6b8a8f;
@@ -268,70 +285,10 @@ section {
   width: 30%;
   padding: 2rem;
 }
-.crashData-container h2,
-.crashData-container h3 {
-  font-size: 4rem;
-}
-.crashData-container h2 {
-  margin: 0 0 4rem 0;
-}
-.crashData-container h4 {
-  margin: 1.5rem 0 1rem 0;
-}
-.crashData-container .crashData-content {
-  margin: 2rem 0;
-  display: flex;
-  justify-content: space-evenly;
-  align-content: center;
-  align-items: center;
-}
-.crashData-container .crashData-content .crashData-left svg {
-  height: 50vh;
-}
-.crashData-container .crashData-content .crashData-left path {
-  fill: #fff;
-  stroke: #666;
-}
-.crashData-container .crashData-content .crashData-left path .active {
-  fill: #fccb8d;
-}
-.crashData-container .crashData-content .crashData-left path:hover {
-  fill: #fccb8d;
-  stroke: #6b8a8f;
-}
-.crashData-container .crashData-content .crashData-left .active {
-  fill: #6b8a8f;
-}
-.crashData-container .crashData-content .crashData-right {
-  width: 40%;
-  margin: 2rem 5rem;
-  padding: 2rem;
-}
-.crashData-container .crashData-content .crashData-right h3 {
-  padding: 1rem 0;
-}
-.team-content {
-  overflow: auto;
-  display: flex;
-  flex-direction: column;
-}
-.team-content .member-card {
-  width: 80%;
-  margin: auto;
-  padding: 2rem;
-  display: flex;
-  align-content: center;
-  align-items: center;
-}
-.team-content .member-card img {
-  width: 150px;
-}
-.team-content .member-card img:hover {
-  transform: rotateY(180deg);
-}
-.team-content .member-card:nth-child(even) {
-  flex-direction: row-reverse;
-  padding: 0 2rem;
+@media (max-width:500px) {
+  .intro-container .intro-img {
+    width: 100%;
+  }
 }
 #joinUs {
   background: url('../img/questions.png');
@@ -342,17 +299,25 @@ section {
 #joinUs .joinUsContainer {
   margin: 5rem 0;
   display: flex;
-  align-content: center;
-  align-items: center;
   flex-direction: row-reverse;
+}
+@media (max-width:500px) {
+  #joinUs .joinUsContainer {
+    flex-direction: column-reverse;
+  }
 }
 #joinUs .joinUsContainer h3 {
   font-size: 2.5rem;
-  margin: 1rem 0;
+  margin: 0 0 1rem 0;
 }
 #joinUs .joinUsContainer div {
   width: 50%;
   padding: 0 2rem;
+}
+@media (max-width:500px) {
+  #joinUs .joinUsContainer div {
+    width: 100%;
+  }
 }
 input[type=text],
 select,
@@ -375,12 +340,111 @@ input[type=submit] {
   text-align: center;
   background: #6b8a8f;
   border: 1px solid #6b8a8f;
+  text-decoration: none;
+  display: inline-block;
   cursor: pointer;
 }
 input[type=submit]:hover {
   background: #fff;
   color: #6b8a8f;
   border: 1px solid #6b8a8f;
+}
+.team-content {
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+.team-content .member-card {
+  width: 80%;
+  margin: auto;
+  padding: 2rem;
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+@media (max-width:500px) {
+  .team-content .member-card {
+    flex-direction: column;
+  }
+}
+.team-content .member-card .memberAvatar {
+  position: relative;
+}
+.team-content .member-card .memberAvatar svg {
+  height: 5rem;
+  position: absolute;
+  right: -10rem;
+  top: 7rem;
+}
+.team-content .member-card img {
+  width: 150px;
+}
+.team-content .member-card:nth-child(even) {
+  flex-direction: row-reverse;
+  padding: 0 2rem;
+}
+@media (max-width:500px) {
+  .team-content .member-card:nth-child(even) {
+    flex-direction: column;
+  }
+}
+.crashData-container h2,
+.crashData-container h3 {
+  font-size: 4rem;
+}
+.crashData-container h2 {
+  margin: 0 0 4rem 0;
+}
+.crashData-container h4 {
+  margin: 1.5rem 0 1rem 0;
+}
+.crashData-container .crashData-content {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  align-items: center;
+}
+@media (max-width:500px) {
+  .crashData-container .crashData-content {
+    flex-direction: column;
+  }
+}
+.crashData-container .crashData-content .crashData-left svg {
+  height: 50vh;
+}
+@media (max-width:500px) {
+  .crashData-container .crashData-content .crashData-left svg {
+    width: 90vw;
+    height: auto;
+  }
+}
+.crashData-container .crashData-content .crashData-left path {
+  fill: #fff;
+  stroke: #666;
+}
+.crashData-container .crashData-content .crashData-left path .active {
+  fill: #fccb8d;
+}
+.crashData-container .crashData-content .crashData-left path:hover {
+  fill: #fccb8d;
+  stroke: #6b8a8f;
+}
+.crashData-container .crashData-content .crashData-left .active {
+  fill: #6b8a8f;
+}
+.crashData-container .crashData-content .crashData-right {
+  width: 40%;
+  margin: 2rem 5rem;
+  padding: 2rem;
+}
+@media (max-width:500px) {
+  .crashData-container .crashData-content .crashData-right {
+    width: 100%;
+  }
+}
+.crashData-container .crashData-content .crashData-right h3 {
+  padding: 1rem 0;
 }
 @font-face {
   font-family: 'Montserrat';
