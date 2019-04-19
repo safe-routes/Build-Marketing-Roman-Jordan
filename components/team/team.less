@@ -1,0 +1,37 @@
+.team-content{
+    overflow:auto;
+    display:flex;
+    flex-direction: column;
+    .member-card{
+        width:80%;
+        margin:auto;
+        padding:2rem;
+        display:flex;
+        align-content: center;  
+        align-items: center;
+
+        @media @mobile{
+            flex-direction: column;
+        }
+        
+        .memberAvatar{
+            position:relative;
+            svg{
+            height:5rem;
+            position:absolute;
+            right:-10rem;
+            top:7rem;
+            }
+        }
+        img{
+            width:150px;
+        }
+    }
+    .member-card:nth-child(even){
+        flex-direction: row-reverse;
+        padding:0 2rem;
+        @media @mobile{
+            flex-direction: column;
+        }
+    }
+}

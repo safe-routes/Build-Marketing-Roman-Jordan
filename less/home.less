@@ -23,7 +23,7 @@ section{
         h2{
             font-size:3.5rem;
         }
-        button{
+        a{
             .custom-button();
         }
     }
@@ -38,104 +38,9 @@ section{
 }
 
 
-.crashData-container{
-    h2,h3{
-        font-size:4rem;
-    }
-    h2{
-        margin: 0 0 4rem 0;
-    }
 
-    h4{
-        margin: 1.5rem 0 1rem 0;
-    }
-    .crashData-content{
-        margin:2rem 0;
-        display:flex;
-        justify-content: space-evenly;
-        align-content: center;
-        align-items: center;
 
-        @media @mobile{
-            flex-direction: column;
-        }
-        
-        .crashData-left{
-            svg{
-                height:50vh;
-                @media @mobile{
-                    width:90vw;
-                    height:auto;
-                }
-            }
-            path{
-                fill:#fff;
-                stroke:#666;
-                .active{
-                    fill:@yel;
-                }
-                &:hover{
-                    fill:@yel;
-                    stroke:@blue;
-                }
-            }
-            .active{
-                fill:@blue;
-            }
-        }
 
-        .crashData-right{
-            width:40%;
-            margin:2rem 5rem;
-            padding:2rem;
-            @media @mobile{
-                width:100%;
-            }
-            h3{
-                padding:1rem 0;
-            }
-        }
-
-    }
-}
-
-.team-content{
-    overflow:auto;
-    display:flex;
-    flex-direction: column;
-    .member-card{
-        width:80%;
-        margin:auto;
-        padding:2rem;
-        display:flex;
-        align-content: center;  
-        align-items: center;
-
-        @media @mobile{
-            flex-direction: column;
-        }
-        
-        .memberAvatar{
-            position:relative;
-            svg{
-            height:5rem;
-            position:absolute;
-            right:-10rem;
-            top:7rem;
-            }
-        }
-        img{
-            width:150px;
-        }
-    }
-    .member-card:nth-child(even){
-        flex-direction: row-reverse;
-        padding:0 2rem;
-        @media @mobile{
-            flex-direction: column;
-        }
-    }
-}
 
 #joinUs{
     background: url('../img/questions.png');
