@@ -52,7 +52,7 @@ const people =[
 
   let component = document.querySelectorAll('.team-content');
   component.forEach(compObj =>{
-    people.forEach(personObj => {
+    people.map(personObj => {
         new MemberCard(compObj,personObj)
     })
   })
