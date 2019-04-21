@@ -1,12 +1,12 @@
 const people =[
-    {name : 'Roman Jordan', 'roll':'','GitHandle': 'https://www.github.com/roman-jordan', 'img' : '', 'gender': 'man'},
-    {name : 'Simon Davis', 'roll':'', 'GitHandle': 'https://github.com/Skidragon', 'img' : '', 'gender': 'man'},
-    {name : 'Trista Paul', 'roll':'', 'GitHandle': 'https://github.com/trista-paul', 'img' : '', 'gender': 'woman'},
-    {name : 'Ed Chin', 'roll':'', 'GitHandle': 'https://github.com/ed-chin-git', 'img' : '', 'gender': 'man'},
-    {name : 'David Barrios', 'roll':'', 'GitHandle': 'https://github.com/dbarrios13', 'img' : '', 'gender': 'man'},
-    {name : 'Jeff Lapp', 'roll':'', 'GitHandle': 'https://github.com/lappjeff', 'img' : '', 'gender': 'man'},
-    {name : 'Carlos Gutierrez', 'roll':'', 'GitHandle': 'https://github.com/carlos-gutier', 'img' : '', 'gender': 'man'},
-    {name : 'Brian Illes', 'roll':'Back-end Architect', 'GitHandle': 'https://github.com/brilles', 'img' : '', 'gender': 'man'}
+    {name : 'Roman Jordan', roll:'',gitHandel: 'https://www.github.com/roman-jordan', img : '', gender: 'man'},
+    {name : 'Simon Davis', roll:'', gitHandel: 'https://github.com/Skidragon', img : '',gender: 'man'},
+    {name : 'Trista Paul', roll:'', gitHandel: 'https://github.com/trista-paul', img : '',gender: 'woman'},
+    {name : 'Ed Chin', roll:'', gitHandel: 'https://github.com/ed-chin-git', img : '',gender: 'man'},
+    {name : 'David Barrios', roll:'', gitHandel: 'https://github.com/dbarrios13', img : '',gender: 'man'},
+    {name : 'Jeff Lapp', roll:'', gitHandel: 'https://github.com/lappjeff', img : '',gender: 'man'},
+    {name : 'Carlos Gutierrez', roll:'', gitHandel: 'https://github.com/carlos-gutier', img : '',gender: 'man'},
+    {name : 'Brian Illes', roll:'Back-end Architect', gitHandel: 'https://github.com/brilles', img : '',gender: 'man'}
   ];
 
   class MemberCard{
@@ -46,9 +46,6 @@ const people =[
 
     }
   }//Chat Bubble
-
-  
-  
 
   let component = document.querySelectorAll('.team-content');
   component.forEach(compObj =>{
