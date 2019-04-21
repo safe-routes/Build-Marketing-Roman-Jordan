@@ -163,6 +163,7 @@ header {
   align-items: center;
   padding: 10px;
   background: #6b8a8f;
+  border-bottom: 5px solid #ddd;
   z-index: 10;
 }
 header h1 {
@@ -195,11 +196,20 @@ nav .navLinks {
   top: 0rem;
   right: 0;
   background: #6b8a8f;
+  border-bottom: 1px solid #ddd;
 }
 @media (max-width:500px) {
   nav .navLinks {
     flex-direction: column;
   }
+}
+nav .navLinks:before {
+  content: '';
+  border-style: solid;
+  border-width: 0 3rem 3rem 0;
+  border-color: transparent #6b8a8f transparent transparent;
+  position: absolute;
+  left: -3rem;
 }
 nav .barWrapper {
   position: absolute;
@@ -373,8 +383,8 @@ input[type=submit]:hover {
 .team-content .member-card .memberAvatar svg {
   height: 5rem;
   position: absolute;
-  right: -10rem;
-  top: 7rem;
+  right: 10rem;
+  top: 8rem;
 }
 .team-content .member-card img {
   width: 150px;
@@ -382,6 +392,9 @@ input[type=submit]:hover {
 .team-content .member-card:nth-child(even) {
   flex-direction: row-reverse;
   padding: 0 2rem;
+}
+.team-content .member-card:nth-child(even) svg {
+  right: -10rem;
 }
 @media (max-width:500px) {
   .team-content .member-card:nth-child(even) {
